@@ -1,0 +1,35 @@
+.image_choix{
+    transition: 600ms;
+}
+.image_choix:hover{
+    transition: 600ms;
+    transform: scale(1.15);
+}
+
+.img_magasin{
+    transition: 600ms;
+}
+.img_magasin:hover{
+    transition: 600ms;
+    transform: scale(1.05);
+}
+.rowM{
+    display: grid;
+    grid-template-columns: 239px 117px 241px 120px 200px;
+    position: relative;
+    top: 34px;
+}
+.container_echange {
+    display: grid;
+    gap: 10px;
+}
+body{
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+    height: 20vh;
+    top: 48px;
+}

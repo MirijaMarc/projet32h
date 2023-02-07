@@ -27,13 +27,13 @@
                                     <path d="M8 11C11.3137 11 14 13.6863 14 17H2C2 13.6863 4.68629 11 8 11Z" fill="currentColor"></path>
                                     <path d="M16 7C16 6.44772 15.5523 6 15 6C14.4477 6 14 6.44772 14 7V8H13C12.4477 8 12 8.44771 12 9C12 9.55228 12.4477 10 13 10H14V11C14 11.5523 14.4477 12 15 12C15.5523 12 16 11.5523 16 11V10H17C17.5523 10 18 9.55228 18 9C18 8.44772 17.5523 8 17 8H16V7Z" fill="currentColor"></path>
                                 </svg></div>
-                            <form class="text-center" method="post">
+                            <form class="text-center" action="<?php echo base_url('login/insert') ?>" method="post">
                                 <div class="mb-3"><input class="form-control" type="text" name="nom" placeholder="Username"></div>
                                 <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
                                 <div class="mb-3"><input class="form-control" type="text" name="birth"  onfocus="(this.type='date')" placeholder="Birth's date"></div>
                                 <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
                                 <div class="mb-3"><input class="form-control" type="password" name="passwordConf" placeholder="Confirm your password"></div>
-                                <div class="mb-3"><button class="btn btn-primary d-block w-100" style="background-color: lightseagreen;" type="submit">Register</button></div>
+                                <div class="mb-3"><input class="btn btn-primary d-block w-100" style="background-color: lightseagreen;" type="submit" value="Register"></div>
                             </form>
                         </div>
                     </div>

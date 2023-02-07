@@ -1,31 +1,75 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 include("SecureController.php");
+
+/**
+ * @property $user
+ */
 class Login extends CI_Controller{
+
+    public function __construct(){
+        parent::__construct();
+        $this->load->model('user');
+    }
 
 
     public function index(){
-        $this->load->view('login2');
+        $this->load->view('login');
     }
 
     public function signup(){
         $this->load->view('signup');
+
     }
 
+    public function validation_signup($data){
+        if ($data['email']==null || $data['email']=="" || $data['nom']==null || $data['nom']=="" || $data['datenaissance']==null ||  $data['datenaissance']=="" || $data['password']==null ||  $data['password']=="" ||  $data['passwordconf']==null ||  $data['passwordconf']=="") {
+            return false;
+        }if ($data['password']!=$data['passwordconf']){
+            return false;
+        }
+        return true;
+    }
 
-
-    public function check(){
-        $this->load->model('user');
-        $email = $this->input->post('email');
-        $mdp = $this->input->post('mdp');
-        if ($this->user->check($email, $mdp)==true){
+    public function insert(){
+        $user=array();
+        $user['email']=$this->input->post('email');
+        $user['nom']=$this->input->post('nom');
+        $user['datenaissance']=$this->input->post('birth');
+        $user['password']=$this->input->post('password');
+        $user['passwordconf']=$this->input->post('passwordConf');
+        if($this->validation_signup($user)){
+            $this->user->save($user);
             $newData = array(
-                'user'=> '1',
-                'email'=>$email,
-                'log_in'=>true
+                'id'=> $this->user->get_lastId(),
+                'email'=>$user['email'],
+                'nom'=>$user['nom']
             );
             $this->session->set_userdata('user',$newData);
             redirect(base_url('home/'));
+        }else {
+            redirect(base_url('login/signup'));
+        }
+
+    }
+
+    public function check(){
+        $email = $this->input->post('email');
+        $mdp = $this->input->post('mdp');
+        if ($this->user->check($email, $mdp)!=false){
+            $user = $this->user->check($email, $mdp);
+            $newData = array(
+                'id'=> $user['id'],
+                'email'=>$email,
+                'nom'=>$user['nom']
+            );
+            $this->session->set_userdata('user',$newData);
+            if ($user['isadmin']==1){
+                redirect(base_url('home_admin/statistique'));
+            }else{
+                redirect(base_url('home/'));
+            }
+
         }else{
             redirect(base_url('login/'));
         }

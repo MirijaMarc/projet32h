@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>footer</title>
-    <link rel="stylesheet" href="assets/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/assets/css/Footer-Clean-icons.css">
-</head>
-
-<body>
-    <footer class="text-center py-4 " style="background-color: var(--bs-gray-300);">
+    <footer class="text-center py-4 " style="background-color: var(--bs-gray-300);position: relative">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3">
                 <div class="col">
@@ -36,15 +25,15 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <ul class="list-inline my-2">
-                        <li class="list-inline-item"><a class="link-secondary" href="#">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a class="link-secondary" href="#">Terms of Use</a></li>
+                    <ul class="list-inline my-3">
+                        <li class="list-inline-item">RAZAFIMBELO Mirija ETU 1900</li>
+                        <li class="list-inline-item">RAJOHNSON Wijjy ETU 1815</li>
+                        <li class="list-inline-item">RAZAFIMANANTSOA Hasina ETU 1909</li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+    <script src=<?php echo base_url('assets/assets/bootstrap/js/bootstrap.min.js'); ?>></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src=<?php echo base_url('assets/assets/js/Lightbox-Gallery.js'); ?>></script>
