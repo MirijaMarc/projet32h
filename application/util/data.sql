@@ -83,36 +83,20 @@ insert into objet(nomobjet,description,prix,iduser,idcategorie) values
 
 insert into photo(idobjet,lien) values
     (1,'img/vetements/1'),
-    
     (2,'img/vetements/2'),
-    
     (3,'img/vetements/3'),
-    
     (4,'img/vetements/4'),
-  
     (5,'img/vetements/5'),
-    
     (6,'img/electronique/6'),
-    
     (7,'img/electronique/7'),
-    
     (8,'img/electronique/8'),
-    
     (9,'img/electronique/9'),
-   
     (10,'img/electronique/10'),
-   
     (11,'img/literature/11'),
-    
     (12,'img/literature/12'),
-    
     (13,'img/literature/13'),
-    
     (14,'img/literature/14'),
-    
-    (15,'img/literature/15'),
-
-
+    (15,'img/literature/15');
 
 
 insert into Historique (idobjet,iduser,dateappartenance) values

@@ -14,7 +14,15 @@ class Login extends CI_Controller{
 
 
     public function index(){
-        $this->load->view('login');
+        $data['email']='wijjy@gmail.com';
+        $data['mdp']='wijjy66';
+        $this->load->view('login',$data);
+    }
+
+    public function index_admin(){
+        $data['email']='root@gmail.com';
+        $data['mdp']='root';
+        $this->load->view('login',$data);
     }
 
     public function signup(){
