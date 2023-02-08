@@ -8,13 +8,34 @@ class Home extends SecureController{
 
     public function __construct(){
         parent::__construct();
+        $this->load->helper('upload');
+    }
+
+    public function upload_objet(){
+        $user = $this->session->user;
+        $nomObj = $this->input->post("nomObj");
+        $idcategorie = $this->input->post("categorie");
+        $description = $this->input->post("description");
+        $prixObj = $this->input->post("prixObj");
+        $this->objet->save($nomObj,$description,$prixObj,$user['id'],$idcategorie);
+        $categorie = $this->categorie->findById($idcategorie);
+        $lastid = $this->objet->get_last_id();
+        $nomPhoto = uploadImage($_FILES["nomPhoto"],$categorie['nomcategorie'],$lastid);
+
+        if($nomPhoto != "non") {
+            redirect(base_url("home/"));
+        }
+        redirect(base_url("home/magasin"));
+
+
     }
 
     public function index(){
         $user = $this->session->user;
         $data['row']=$this->objet->findByIduserDetaille($user['id']);
         $data2['row_categorie']=$this->categorie->findAll();
-        $this->load->view('header',$data2);
+        $data['row_categorie']=$data2['row_categorie'];
+        $this->load->view('header_home',$data2);
         $this->load->view('home',$data);
         $this->load->view('footer');
         

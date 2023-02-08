@@ -33,3 +33,35 @@ footer{
     height: 20vh;
     top: 48px;
 }
+
+.add_btn
+{
+    border-radius: 100%;
+    width: 3%;
+    position: fixed;
+    bottom: 10%;
+    right: 4%;
+}
+
+.modal_subtitle
+{
+    display: flex;
+    justify-content: center;
+}
+
+.modal_input
+{
+    margin-top: 1em;
+}
+
+.div_modal_btn
+{
+    margin-top: 1em;
+}
+
+.class_home{
+    position: relative;
+    display: grid;
+    grid-template-columns: 156% 156% 156%;
+    left: -13%;
+}

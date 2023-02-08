@@ -45,7 +45,7 @@ class User extends CI_Model{
     }
 
     public function count_user(){
-        $query = $this->db->query('SELECT count(*) as num from User');
+        $query = $this->db->query('SELECT count(*) as num from User where isadmin!=1');
         $row= $query->row_array();
         return $row['num'];
     }

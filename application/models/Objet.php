@@ -21,6 +21,18 @@ class Objet extends CI_Model
         $this->db->query($sql);
     }
 
+    public function save($nomObj,$description,$prixObj,$id,$idcategorie){
+        $sql= "INSERT INTO objet(nomobjet,description,prix,iduser,idcategorie) values (%s,%s,%s,%s,%s)";
+        $sql = sprintf($sql,$this->db->escape($nomObj),$this->db->escape($description),$this->db->escape($prixObj),$this->db->escape($id),$this->db->escape($idcategorie));
+        echo $sql;
+        $this->db->query($sql);
+    }
+
+    public function get_last_id(){
+        $query = $this->db->query('SELECT id from objet order by id DESC LIMIT 1');
+        $row= $query->row_array();
+        return $row['id'];
+    }
     public function findByuserDetailleTransac($iduser,$iddemande){
         $rep=array();
         $query= $this->db->query('select o.id, o.nomobjet,o.description,o.prix,u.nom, c.nomcategorie from objet as o Join User as u on o.iduser=u.id JOIN categorie as c on o.idcategorie=c.id where o.iduser='.$this->db->escape($iduser).' AND o.id NOT IN (SELECT iddemandant from echange where iddemande='.$this->db->escape($iddemande).' and etat=0)');
