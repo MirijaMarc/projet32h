@@ -7,13 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Admin E-Takalo</title>
+    <title>header</title>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/bootstrap/css/bootstrap.min.css')?>>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/fonts/fontawesome-all.min.css') ?>>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/css/Footer-Clean-icons.css') ?>>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/css/Articles-Cards-images.css') ?>>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/css/Features-Cards-icons.css') ?>>
     <link rel="stylesheet" href=<?php echo base_url('assets/css/style.css')?>>
+    <link rel="stylesheet" href=<?php echo base_url('assets/css/bulma.min.css')?>>
 </head>
 
 <body style="background: white;">
@@ -33,3 +34,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 
 </html>
+

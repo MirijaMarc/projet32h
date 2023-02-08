@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>header</title>
+    <title>E-Takalo</title>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/bootstrap/css/bootstrap.min.css')?>>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/fonts/fontawesome-all.min.css') ?>>
     <link rel="stylesheet" href=<?php echo base_url('assets/assets/css/Footer-Clean-icons.css') ?>>
@@ -29,6 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form action="<?php echo base_url('home/search'); ?>" method="post">
                     <input type="text" style="margin-bottom: 0px;margin-right: 120px;" name="search">
                     <select name="categorie" style="top: 15px;position: absolute;left: 79%;">
+                        <option value="">Tous</option>
                         <?php foreach ($row_categorie as $categorie){?>
                             <option value=<?php echo $categorie['id']; ?>><?php echo $categorie['nomcategorie']; ?></option>
                         <?php } ?>

@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div>
                                 <p class="fw-bold mb-0"><?php echo $objet['prix']; ?> AR</p>
                                 <p class="text-muted mb-0"></p>
-                            </div><a href="#" style="position: relative;right: -80px;">Modifier</a><a href="#" style="position: relative;right: -104px;/*margin-right: 7px;*/">Supprimer</a>
+                            </div><a href="#" style="position: relative;right: -80px;">+/-10%</a><a href="#" style="position: relative;right: -104px;/*margin-right: 7px;*/">+/-20%</a>
                         </div>
                     </div>
                 </div>

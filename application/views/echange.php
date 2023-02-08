@@ -1,3 +1,11 @@
+<div>
+    <h2 style="
+    color: lightseagreen;
+    position: absolute;
+    left: 162px;
+">Vous trouverez ici tous les personnes qui veulent échanger avec vous</h2>
+</div>
+
 <div class="container_echange">
     <?php foreach ($row as $demande){ ?>
         <div class="row rowM" style="height: 200px;">
