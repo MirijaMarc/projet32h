@@ -65,3 +65,13 @@ footer{
     grid-template-columns: 156% 156% 156%;
     left: -13%;
 }
+
+.button.is-link {
+    width: 90px;
+    background-color: lightseagreen;
+    border-color: transparent;
+    color: #fff;
+    height: 2;
+    height: 11vh;
+
+}

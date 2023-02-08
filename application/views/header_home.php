@@ -28,8 +28,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </ul>
         </div>
         <form action="<?php echo base_url('home/search'); ?>" method="post">
-            <input type="text" style="margin-bottom: 0px;margin-right: 120px;" name="search">
-            <select name="categorie" style="top: 21px;position: absolute;left: 79%;">
+            <input type="text" style="" name="search">
+            <select name="categorie" style="position: relative;">
                 <option value="">Tous</option>
                 <?php foreach ($row_categorie as $categorie){?>
                     <option value=<?php echo $categorie['id']; ?>><?php echo $categorie['nomcategorie']; ?></option>

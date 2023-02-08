@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <div style="display: grid;">
-    <div class="container py-4 py-xl-5 class_home" >
+    <div class="container py-4 py-xl-5" >
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
             <?php foreach ($row as $objet){ ?>
             <div class="col">
@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <button class="js-modal-trigger button is-link add_btn" data-target="modal-add-objet">
         <figure class="icon">
-            <i class="fas fa-plus"></i>
+            Ajouter
         </figure>
     </button>
     <form action="<?php echo base_url("home/upload_objet"); ?>" method="post" enctype="multipart/form-data">
